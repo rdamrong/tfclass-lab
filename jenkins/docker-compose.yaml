@@ -2,7 +2,6 @@ version: '3'
 services:
   jenkins:
     container_name: jenkins
-      # image: damrongsak/myjenkins:arm64
     image: jenkins/jenkins
     ports:
       - "8080:8080"
