@@ -1,0 +1,16 @@
+version: '3'
+services:
+  jenkins:
+    container_name: jenkins
+      # image: damrongsak/myjenkins:arm64
+    image: jenkins/jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+      - "jenkins_home:/var/jenkins/home"
+    networks:
+      - jenkins_network
+networks:
+  jenkins_network:
+volumes:
+  jenkins_home:

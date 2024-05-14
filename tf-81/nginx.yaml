@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Update repositories cache and install "nginx" package
+      ansible.builtin.apt:
+          name: nginx
+          update_cache: yes

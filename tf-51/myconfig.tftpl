@@ -1,0 +1,6 @@
+tream backend {
+  %{ for s in serverlist ~}
+    server ${s};
+  %{endfor~}
+}
+
